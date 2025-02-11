@@ -42,8 +42,7 @@ public class WebElementCommands extends Base
 		System.out.println(showMessageButton.getSize());
 		
 		// Get and print the tag name of the button element
-		System.out.println(showMessageButton.getTagName());
-		
+		System.out.println(showMessageButton.getTagName());	
 		
 	}
 
@@ -54,7 +53,6 @@ public class WebElementCommands extends Base
 		element.initializeBrowser();
 		element.webElementCommands();
 		element.driverCloseAndQuit();
-
 	}
 
 }
