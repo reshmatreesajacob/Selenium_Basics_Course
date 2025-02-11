@@ -1,32 +1,34 @@
 package seleniumBasics;
 
 //Inheriting the parent class Base
-public class BrowserCommands extends Base {
-	public void browserCommands() {
-		// to get current URL
-		String url = driver.getCurrentUrl();
+public class BrowserCommands extends Base 
+{
+	public void browserCommands()
+	{
+		//To get current URL
+		String url=driver.getCurrentUrl();
 		System.out.println(url);
-
-		// to get title of the Webpage (Here Obsqura Testing)
-		String title = driver.getTitle();
+		
+		//To get the title of Webpage(Here Obsqura Testing)
+		String title=driver.getTitle();
 		System.out.println(title);
-
-		// to get window handle id of that webpage
-		String handleId = driver.getWindowHandle();
+		
+		//To get the window Handle Id of that webpage
+		String handleId=driver.getWindowHandle();
 		System.out.println(handleId);
-
-		// to get the source code
-		String pageSource = driver.getPageSource();
+		
+		//To get the source code
+		String pageSource=driver.getPageSource();
 		System.out.println(pageSource);
-
 	}
 
-	public static void main(String[] args) {
-		BrowserCommands browser = new BrowserCommands();
-
-		browser.initializeBrowser(); // Base class Method
+	public static void main(String[] args) 
+	{
+		BrowserCommands browser=new BrowserCommands();
+		
+		browser.initializeBrowser();
 		browser.browserCommands();
-		browser.driverCloseAndQuit(); // Base class Method
+		//browser.driverCloseAndQuit();
 
 	}
 

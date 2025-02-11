@@ -1,46 +1,50 @@
 package seleniumBasics;
 
-//Imports the WebDriver interface to do operations in the browser
 import org.openqa.selenium.WebDriver;
-
-//Imports the ChromeDriver class to interact with the Chrome browser
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Base {
 	
-	// Declares a WebDriver instance named driver
+	//Declares a WebDriver instance named driver
 	public WebDriver driver;
 	
-	// Method to initialize the browser
+	//Method to initialize the browser
 	public void initializeBrowser()
 	{
-		// Creates a new instance of a browser
-		//driver = new EdgeDriver();
-	    //driver = new FirefoxDriver();
-		driver=new ChromeDriver(); 
+		//Creates a new instnace of a browser
+		driver=new ChromeDriver();
+		//driver=new EdgeDriver();
+		//driver=new FirefoxDriver();
 		
-		// Opens the specified URL in minimize screen
-		driver.get("https://selenium.qabible.in/"); 
-		driver.manage().window().maximize(); // to maximize the screen
+		//Opens then specified URL in minimized screen
+		driver.get("https://selenium.qabible.in/");
+		
+		//To maximize the screen
+		driver.manage().window().maximize();
 	}
 	
-	//Method to close the opened window in a session
+	//Method to close the openend window in a session
 	public void driverCloseAndQuit()
 	{
-		//driver.close(); // to close a single window(Latest one)
-		driver.quit(); // to close all window in current session
+		//To close a single window(Latest one)
+		//driver.close();
+		
+		//To close all windows in current session(i.e multiple screen openened)
+		driver.quit();
 	}
-	
+
 	public static void main(String[] args) 
 	{
 		Base base=new Base();
 		
-		// Calls the initializeBrowser() method to launch Chrome
+		//Calls the initializeBrowser() to launch the browser
 		base.initializeBrowser();
 		
+		//Calls the driverCloseAndQuit() to close the browser window 
 		base.driverCloseAndQuit();
 
 	}
+
 }
