@@ -1,7 +1,5 @@
 package seleniumBasics;
 
-import java.rmi.server.LoaderHandler;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
