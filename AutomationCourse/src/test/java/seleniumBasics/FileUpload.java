@@ -57,7 +57,7 @@ public class FileUpload extends Base {
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		
 		// Simulating CTRL + V to paste the file path
-		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_CONTROL); 
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_V);
@@ -83,5 +83,6 @@ public class FileUpload extends Base {
 		// TODO Auto-generated method stub
 
 	}
-
 }
+
+
