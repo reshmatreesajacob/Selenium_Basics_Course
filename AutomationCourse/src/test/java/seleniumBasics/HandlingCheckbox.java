@@ -1,13 +1,20 @@
 package seleniumBasics;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 
 public class HandlingCheckbox extends Base
 {
+	public WebDriver driver;
 	public void handlingCheckbox()
 	{
         // Navigating to the checkbox demo page
@@ -54,6 +61,13 @@ public class HandlingCheckbox extends Base
 		// Checking if the radio button is selected
         // isSelected() returns true if the element is selected, otherwise false
 		System.out.println(genderRadio.isSelected());
+		
+		//Fluent wait 
+		Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver) // reference
+				.withTimeout(Duration.ofSeconds(10))      // time specify
+				.pollingEvery(Duration.ofSeconds(3))      // checking times
+				.ignoring(NoSuchElementException.class);   //ignore exception
+		fluentWait.until(ExpectedConditions.elementToBeSelected(genderRadio));
 		
 		// Locating the "Show Value" button
 		WebElement showValue=driver.findElement(By.xpath("//button[@id='button-one']"));

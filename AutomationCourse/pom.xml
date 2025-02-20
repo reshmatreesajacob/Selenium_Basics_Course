@@ -18,6 +18,4 @@
 	    <scope>test</scope>
 	</dependency>
   </dependencies>
-  <name>Selenium_Basics</name>
-  <description>AutomationCourse_Selenium_basics_Jan_27_2025</description>
 </project>

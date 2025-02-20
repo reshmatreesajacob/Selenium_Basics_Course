@@ -1,7 +1,12 @@
 package seleniumBasics;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebElementCommands extends Base
 {
@@ -19,8 +24,12 @@ public class WebElementCommands extends Base
 		// Locate the "Show Message" button
         WebElement messageButton = driver.findElement(By.xpath("//button[@id='button-one']"));
 		
+       // explict Wait
+        WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10)); //explicit wait
+        wait.until(ExpectedConditions.elementToBeClickable(messageButton)); // condition for wait
+		
         // Click on the "Show Message" button
-		messageButton.click();
+        messageButton.click();
 		
 		// To Clear the input field 
         // messageField.clear();
