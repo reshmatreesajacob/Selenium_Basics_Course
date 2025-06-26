@@ -73,6 +73,9 @@ public class Locators extends Base
 		//Using ancestor, we can see all the ancestors above the current one
 		//Used when When searching for a common parent container of an element.
 		driver.findElement(By.xpath("//button[@id='button-one']//ancestor::div"));
+
+		// we can also write xpath like this,to locate
+		//***//label[@for="Filter-Style size-2"] //span[@class="position-relative d-block mr-8 border"]
 		
 	}
 
